@@ -1,9 +1,10 @@
+
 resource "aws_lb" "alb" {
   name                       = "sourcefuse-alb"
   internal                   = false
   load_balancer_type         = "application"
   security_groups            = [aws_security_group.sourcefuse_sg.id]
-  subnets                    = ["subnet-0c55dc4b9925c9dc0", "subnet-05dc25d203c28b60a"]
+  subnets                    = var.public_subnet_ids
   enable_deletion_protection = false
 
   tags = {
