@@ -8,7 +8,7 @@ resource "aws_security_group" "sourcefuse_sg" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] #Insert your Ip here.
+    cidr_blocks = ["65.190.92.149/32"] #Insert your Ip here.
   }
 
   egress {
