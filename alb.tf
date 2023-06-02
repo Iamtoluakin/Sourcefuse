@@ -4,7 +4,7 @@ resource "aws_lb" "alb" {
   internal                   = false
   load_balancer_type         = "application"
   security_groups            = [aws_security_group.sourcefuse_sg.id]
-  subnets                    = var.public_subnet_ids
+  subnets                    = [aws_subnet.sourcefuse_public_subnet_1.id, aws_subnet.sourcefuse_public_subnet_2.id]
   enable_deletion_protection = false
 
   tags = {

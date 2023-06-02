@@ -8,7 +8,7 @@ resource "aws_vpc" "sourcefuse_vpc" {
 resource "aws_subnet" "sourcefuse_public_subnet_1" {
   vpc_id     = aws_vpc.sourcefuse_vpc.id
   cidr_block = "10.0.16.0/24"
-  availability_zone = "us-east-1e"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "sourcefuse_public_subnet_1"
   }

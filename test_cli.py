@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 from io import StringIO
-import cli
+import Python_scripts.cli as cli
 
 class TestCLI(unittest.TestCase):
     def test_list_s3_files_command(self):
